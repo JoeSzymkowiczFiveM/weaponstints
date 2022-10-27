@@ -19,11 +19,11 @@ local mk2Tints = {
     "Classic Brown & Black", "Red Contrast", "Blue Contrast", "Yellow Contrast", "Orange Contrast", "Bold Pink", "Bold Purple & Yellow",
     "Bold Orange","Platinum","Bold Green & Purple","Bold Red Features","Bold Green Features","Bold Cyan Features","Bold Yellow Features","Bold Red & White", 
     "Bold Blue & White", "Metallic Gold", "Metallic Platinum", "Metallic Gray & Lilac", "Metallic Purple & Lime", "Metallic Red", "Metallic Green", "Metallic Blue", 
-    "Metallic White & Aqua", "Metallic Orange & Yellow", "Mettalic Red and Yellow"}
+    "Metallic White & Aqua", "Metallic Orange & Yellow", "Mettalic Red and Yellow"
+}
 
 local function TintsMenu()
-    local ped = PlayerPedId()
-	local weaponhash = GetSelectedPedWeapon(ped)
+    local weaponhash = GetSelectedPedWeapon(cache.ped)
     if weaponhash == `WEAPON_UNARMED` then return end
     local mk2Weapon = false
     if mk2Weapons[weaponhash] then mk2Weapon = true end
@@ -41,7 +41,7 @@ local function TintsMenu()
                 title = v .. ' Weapon Tint',
                 description = 'Apply this tint',
                 onSelect = function(args)
-                    SetPedWeaponTintIndex(ped, weaponhash, k+1)
+                    SetPedWeaponTintIndex(cache.ped, weaponhash, k+1)
                 end,
             }
         end
@@ -51,7 +51,7 @@ local function TintsMenu()
                 title = v .. ' Weapon Tint',
                 description = 'Apply this tint',
                 onSelect = function(args)
-                    SetPedWeaponTintIndex(ped, weaponhash, k+1)
+                    SetPedWeaponTintIndex(cache.ped, weaponhash, k+1)
                 end,
             }
         end

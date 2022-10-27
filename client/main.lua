@@ -1,4 +1,4 @@
-local mk2Weapons = {
+local mk2Weapons = { --I'm sure there are more mk2 weapons than this, but quick search yielded these. Always open to PRs.
     [1432025498] = true,
     [961495388] = true,
     [-86904375] = true,
@@ -10,6 +10,7 @@ local mk2Weapons = {
     [4208062921] = true,
 }
 
+--Tint indexes provided by https://docs.fivem.net/natives/?_0x50969B9B89ED5738
 local origTints = {
     "Default", "Green", "Gold", "Pink", "Camo", "LSPD", "Orange", "Platinum", 
 }

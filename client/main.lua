@@ -62,6 +62,4 @@ local function TintsMenu()
     lib.showContext('tints_menu')
 end
 
-RegisterCommand("weapontints", function()
-    TintsMenu()
-end)
+RegisterCommand("weapontints", TintsMenu)

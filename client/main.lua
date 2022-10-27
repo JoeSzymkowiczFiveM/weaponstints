@@ -1,4 +1,4 @@
-local mk2Weapons = {
+local mk2Weapons = { --I'm sure there are more mk2 weapons than this, but quick search yielded these. Always open to PRs.
     [1432025498] = true,
     [961495388] = true,
     [-86904375] = true,
@@ -10,16 +10,45 @@ local mk2Weapons = {
     [4208062921] = true,
 }
 
+--Tint indexes provided by https://docs.fivem.net/natives/?_0x50969B9B89ED5738
 local origTints = {
     "Default", "Green", "Gold", "Pink", "Camo", "LSPD", "Orange", "Platinum", 
 }
 
 local mk2Tints = {
-    "Classic Black", "Classic Gray", "Classic Two-Tone", "Classic White", "Classic Beige", "Classic Green", "Classic Blue", "Classic Earth",
-    "Classic Brown & Black", "Red Contrast", "Blue Contrast", "Yellow Contrast", "Orange Contrast", "Bold Pink", "Bold Purple & Yellow",
-    "Bold Orange","Platinum","Bold Green & Purple","Bold Red Features","Bold Green Features","Bold Cyan Features","Bold Yellow Features","Bold Red & White", 
-    "Bold Blue & White", "Metallic Gold", "Metallic Platinum", "Metallic Gray & Lilac", "Metallic Purple & Lime", "Metallic Red", "Metallic Green", "Metallic Blue", 
-    "Metallic White & Aqua", "Metallic Orange & Yellow", "Mettalic Red and Yellow"
+    'Classic Black',
+    'Classic Gray',
+    'Classic Two-Tone',
+    'Classic White',
+    'Classic Beige',
+    'Classic Green',
+    'Classic Blue',
+    'Classic Earth',
+    'Classic Brown & Black',
+    'Red Contrast',
+    'Blue Contrast',
+    'Yellow Contrast',
+    'Orange Contrast',
+    'Bold Pink',
+    'Bold Purple & Yellow',
+    'Bold Orange',
+    'Bold Green & Purple',
+    'Bold Red Features',
+    'Bold Green Features',
+    'Bold Cyan Features',
+    'Bold Yellow Features',
+    'Bold Red & White',
+    'Bold Blue & White',
+    'Metallic Gold',
+    'Metallic Platinum',
+    'Metallic Gray & Lilac',
+    'Metallic Purple & Lime',
+    'Metallic Red',
+    'Metallic Green',
+    'Metallic Blue',
+    'Metallic White & Aqua',
+    'Metallic Orange & Yellow',
+    'Mettalic Red and Yellow',
 }
 
 local function TintsMenu()

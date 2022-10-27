@@ -52,8 +52,7 @@ local mk2Tints = {
 }
 
 local function TintsMenu()
-    local ped = PlayerPedId()
-	local weaponhash = GetSelectedPedWeapon(ped)
+    local weaponhash = GetSelectedPedWeapon(cache.ped)
     if weaponhash == `WEAPON_UNARMED` then return end
     local mk2Weapon = false
     if mk2Weapons[weaponhash] then mk2Weapon = true end
@@ -71,7 +70,7 @@ local function TintsMenu()
                 title = v .. ' Weapon Tint',
                 description = 'Apply this tint',
                 onSelect = function(args)
-                    SetPedWeaponTintIndex(ped, weaponhash, k-1)
+                    SetPedWeaponTintIndex(cache.ped, weaponhash, k+1)
                 end,
             }
         end
@@ -81,7 +80,7 @@ local function TintsMenu()
                 title = v .. ' Weapon Tint',
                 description = 'Apply this tint',
                 onSelect = function(args)
-                    SetPedWeaponTintIndex(ped, weaponhash, k-1)
+                    SetPedWeaponTintIndex(cache.ped, weaponhash, k+1)
                 end,
             }
         end

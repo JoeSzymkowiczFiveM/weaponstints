@@ -70,7 +70,7 @@ local function TintsMenu()
                 title = v .. ' Weapon Tint',
                 description = 'Apply this tint',
                 onSelect = function(args)
-                    SetPedWeaponTintIndex(cache.ped, weaponhash, k+1)
+                    SetPedWeaponTintIndex(cache.ped, weaponhash, k-1)
                 end,
             }
         end
@@ -80,7 +80,7 @@ local function TintsMenu()
                 title = v .. ' Weapon Tint',
                 description = 'Apply this tint',
                 onSelect = function(args)
-                    SetPedWeaponTintIndex(cache.ped, weaponhash, k+1)
+                    SetPedWeaponTintIndex(cache.ped, weaponhash, k-1)
                 end,
             }
         end

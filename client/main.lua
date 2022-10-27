@@ -36,7 +36,7 @@ local function TintsMenu()
     local options = {}
 
     if mk2Weapon then 
-        for k, v in pairs(mk2Tints) do
+        for i = 1, #mk2Tints do
             options[#options+1] = {
                 title = v .. ' Weapon Tint',
                 description = 'Apply this tint',
@@ -46,7 +46,7 @@ local function TintsMenu()
             }
         end
     else
-        for k, v in pairs(origTints) do
+        for i = 1, #origTints do
             options[#options+1] = {
                 title = v .. ' Weapon Tint',
                 description = 'Apply this tint',

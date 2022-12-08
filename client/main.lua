@@ -67,20 +67,20 @@ local function TintsMenu()
     if mk2Weapon then 
         for i = 1, #mk2Tints do
             options[#options+1] = {
-                title = v .. ' Weapon Tint',
+                title = mk2Tints[i] .. ' Weapon Tint',
                 description = 'Apply this tint',
                 onSelect = function(args)
-                    SetPedWeaponTintIndex(cache.ped, weaponhash, k-1)
+                    SetPedWeaponTintIndex(cache.ped, weaponhash, i-1)
                 end,
             }
         end
     else
         for i = 1, #origTints do
             options[#options+1] = {
-                title = v .. ' Weapon Tint',
+                title = mk2Tints[i] .. ' Weapon Tint',
                 description = 'Apply this tint',
                 onSelect = function(args)
-                    SetPedWeaponTintIndex(cache.ped, weaponhash, k-1)
+                    SetPedWeaponTintIndex(cache.ped, weaponhash, i-1)
                 end,
             }
         end
